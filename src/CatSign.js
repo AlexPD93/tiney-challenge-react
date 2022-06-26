@@ -1,5 +1,5 @@
 import "./CatSign.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SignedIn from "./SignedIn.js";
 
 export default function CatSign(props) {
@@ -8,6 +8,7 @@ export default function CatSign(props) {
   const [cat, setCat] = useState(null);
   const [dateTime, setDateTime] = useState("");
   const [container, setContainer] = useState(null);
+  console.log(dateTime);
 
   const cats = ["Mittens", "Bao", "Amber", "Tash", "Kasia", "Luna", "Spike"];
 

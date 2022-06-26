@@ -1,28 +1,36 @@
 import "./SignedIn.css";
 import React, { useState, useEffect } from "react";
 
-export default function SignedIn(props) {
+export default function SignedIn({
+  signIn,
+  setSignIn,
+  cat,
+  setIsShown,
+  setDateTime,
+  container,
+}) {
   const [shown, setShown] = useState(true);
 
   const dateTime = new Date().toLocaleString().split(",").join("").slice(0, 16);
 
   useEffect(() => {
-    props.setIsShown(true);
+    setIsShown(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shown]);
 
   function handleClick() {
     setShown((current) => !current);
-    props.setSignIn(false);
-    props.setDateTime(dateTime);
-    props.container.innerText = `Signed in at ${dateTime}`;
+    setSignIn(false);
+    setDateTime(dateTime);
+    container.innerText = `Signed in at ${dateTime}`;
   }
 
-  if (props.signIn) {
+  if (signIn) {
     return (
       <div className="SignedIn">
         <h2>Sign in</h2>
         <div className="sureSignIn">
-          Are you sure you want to sign in {props.cat}?
+          Are you sure you want to sign in {cat}?
         </div>
         <p>Date and time:</p>
         <div className="showDateTime">{dateTime}</div>
