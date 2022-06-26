@@ -1,3 +1,7 @@
 .childContainer {
   display: flex;
 }
+
+.signInOut {
+  background-color: #f0677a;
+}

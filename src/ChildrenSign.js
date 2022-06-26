@@ -1,10 +1,15 @@
 import "./ChildrenSign.css";
-import React, { useState } from "react";
+import React from "react";
 
 export default function ChildrenSign({ children }) {
-  const [buttonText, setButtonText] = useState("Sign In");
-  function handleClick() {
-    setButtonText("Sign Out");
+  function handleClick(e) {
+    if (e.target.innerText === "Sign In") {
+      e.target.innerText = "Sign Out";
+      e.target.style.background = "#feffff";
+    } else {
+      e.target.innerText = "Sign In";
+      e.target.style.background = "#f0677a";
+    }
   }
 
   return (
@@ -15,8 +20,8 @@ export default function ChildrenSign({ children }) {
             <img src="/" alt="/"></img>
             <p> {child} </p>
             <p>Signed In</p>
-            <button className="signInOut" onClick={handleClick}>
-              {buttonText}
+            <button className={"signInOut"} onClick={handleClick}>
+              Sign In
             </button>
           </div>
         );
