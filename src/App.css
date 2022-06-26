@@ -1,3 +1,8 @@
+.App {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
 header {
   background-color: #f5f5f8;
   text-align: center;

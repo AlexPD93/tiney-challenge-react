@@ -6,4 +6,5 @@
 .logHistory {
   border: none;
   background-color: white;
+  cursor: pointer;
 }

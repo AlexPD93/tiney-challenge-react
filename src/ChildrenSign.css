@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.catsExpected {
+  text-align: center;
+}
+
 .signInOut {
   background-color: #f0677a;
 }

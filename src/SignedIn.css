@@ -1,0 +1,15 @@
+h2 {
+  text-align: center;
+}
+
+.sureSignIn {
+  font-size: 18px;
+  text-align: center;
+}
+
+.showDateTime {
+  border: 2px solid black;
+  text-align: center;
+  padding: 1rem;
+  font-size: 30px;
+}
