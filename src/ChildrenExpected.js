@@ -1,14 +1,26 @@
 import "./ChildrenExpected.css";
+import React from "react";
+import ChildrenSign from "./ChildrenSign.js";
 
 export default function ChildrenExpected() {
+  const children = [
+    "Mittens",
+    "Bao",
+    "Amber",
+    "Tash",
+    "Kasia",
+    "Luna",
+    "Spike",
+  ];
+
   function expectedChildren(children) {
-    console.log(children);
-    return `You have ${children} children expected today `;
+    return `You have ${children.length} cats expected today `;
   }
 
   return (
     <div className="ChildrenExpected">
-      <div className="expectedChildren">{expectedChildren(7)}</div>
+      <div className="expectedChildren">{expectedChildren(children)}</div>
+      <ChildrenSign children={children} />
     </div>
   );
 }

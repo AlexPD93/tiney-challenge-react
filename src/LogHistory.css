@@ -3,7 +3,7 @@
   justify-content: space-evenly;
 }
 
-button {
+.logHistory {
   border: none;
   background-color: white;
 }
