@@ -1,17 +1,21 @@
-import "./ChildrenSign.css";
-import React, { useState } from "react";
+import "./CatSign.css";
+import React, { useEffect, useState } from "react";
 import SignedIn from "./SignedIn.js";
 
-export default function ChildrenSign(props) {
+export default function CatSign(props) {
   const [signIn, setSignIn] = useState(false);
   const [isShown, setIsShown] = useState(true);
   const [cat, setCat] = useState(null);
+  const [dateTime, setDateTime] = useState("");
+  const [container, setContainer] = useState(null);
+
   const cats = ["Mittens", "Bao", "Amber", "Tash", "Kasia", "Luna", "Spike"];
 
   function handleClick(e) {
     if (e.target.innerText === "Sign In") {
       e.target.innerText = "Sign Out";
       e.target.style.background = "#feffff";
+      setContainer(e.target.parentNode.children[2]);
       setCat(e.target.parentNode.children[1].innerText);
       setIsShown((current) => !current);
       setSignIn(true);
@@ -23,7 +27,7 @@ export default function ChildrenSign(props) {
 
   if (props.dailyLog) {
     return (
-      <div className="ChildrenSign">
+      <div className="CatSign">
         <div
           className="catsExpected"
           style={{ display: isShown ? "block" : "none" }}
@@ -48,13 +52,15 @@ export default function ChildrenSign(props) {
         })}
         <SignedIn
           signIn={signIn}
+          setSignIn={setSignIn}
           cat={cat}
           setIsShown={setIsShown}
-          dailyLog={props.dailyLog}
+          setDateTime={setDateTime}
+          container={container}
         />
       </div>
     );
-  } else if (props.setYes) {
-    return "hello";
+  } else {
+    return null;
   }
 }

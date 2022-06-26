@@ -1,6 +1,6 @@
 import "./LogHistory.css";
 import React, { useState } from "react";
-import ChildrenSign from "./ChildrenSign.js";
+import CatSign from "./CatSign.js";
 import History from "./History.js";
 
 export default function LogHistory() {
@@ -16,7 +16,7 @@ export default function LogHistory() {
           History
         </button>
       </div>
-      <ChildrenSign dailyLog={dailyLog} />
+      <CatSign dailyLog={dailyLog} />
       <History dailyLog={dailyLog} />
     </div>
   );
