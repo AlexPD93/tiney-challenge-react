@@ -6,7 +6,6 @@ export default function SignedIn({
   setSignIn,
   cat,
   setIsShown,
-  setDateTime,
   container,
 }) {
   const [shown, setShown] = useState(true);
@@ -21,7 +20,6 @@ export default function SignedIn({
   function handleClick() {
     setShown((current) => !current);
     setSignIn(false);
-    setDateTime(dateTime);
     container.innerText = `Signed in at ${dateTime}`;
   }
 

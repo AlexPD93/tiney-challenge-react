@@ -6,9 +6,7 @@ export default function CatSign(props) {
   const [signIn, setSignIn] = useState(false);
   const [isShown, setIsShown] = useState(true);
   const [cat, setCat] = useState(null);
-  const [dateTime, setDateTime] = useState("");
   const [container, setContainer] = useState(null);
-  console.log(dateTime);
 
   const cats = ["Mittens", "Bao", "Amber", "Tash", "Kasia", "Luna", "Spike"];
 
@@ -22,6 +20,7 @@ export default function CatSign(props) {
       setSignIn(true);
     } else {
       e.target.innerText = "Sign In";
+      e.target.parentNode.children[2].innerText = `Signed Out`;
       e.target.style.background = "#f0677a";
     }
   }
@@ -56,7 +55,6 @@ export default function CatSign(props) {
           setSignIn={setSignIn}
           cat={cat}
           setIsShown={setIsShown}
-          setDateTime={setDateTime}
           container={container}
         />
       </div>
