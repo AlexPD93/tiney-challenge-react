@@ -1,13 +1,75 @@
 import "./History.css";
+import React, { useState } from "react";
 
 export default function History(props) {
-  const fullDate = new Date();
-  const year = fullDate.getFullYear();
-  const month = fullDate.toDateString().slice(4, 7);
-  const date = fullDate.toDateString().slice(8, 11);
+  const [buttonOne, setButtonOne] = useState(false);
+  const [buttonTwo, setButtonTwo] = useState(false);
+  const [buttonThree, setButtonThree] = useState(false);
+  const [buttonFour, setButtonFour] = useState(false);
+  const [buttonFive, setButtonFive] = useState(false);
 
-  function handleClick(e) {
+  function handleMon(e) {
     console.log(e);
+    if (e.target.innerText === "Show") {
+      e.target.innerText = "Hide";
+      setButtonOne(true);
+    } else {
+      e.target.innerText = "Show";
+      setButtonOne(false);
+    }
+  }
+
+  function handleTue(e) {
+    if (e.target.innerText === "Show") {
+      e.target.innerText = "Hide";
+      setButtonTwo(true);
+    } else {
+      e.target.innerText = "Show";
+      setButtonTwo(false);
+    }
+  }
+
+  function handleWed(e) {
+    if (e.target.innerText === "Show") {
+      e.target.innerText = "Hide";
+      setButtonThree(true);
+    } else {
+      e.target.innerText = "Show";
+      setButtonThree(false);
+    }
+  }
+
+  function handleThu(e) {
+    if (e.target.innerText === "Show") {
+      e.target.innerText = "Hide";
+      setButtonFour(true);
+    } else {
+      e.target.innerText = "Show";
+      setButtonFour(false);
+    }
+  }
+
+  function handleFri(e) {
+    if (e.target.innerText === "Show") {
+      e.target.innerText = "Hide";
+      setButtonFive(true);
+    } else {
+      e.target.innerText = "Show";
+      setButtonFive(false);
+    }
+  }
+
+  function createList() {
+    const list = React.createElement("ul", {}, [
+      React.createElement("li", { key: "mittens" }, "Mittens"),
+      React.createElement("li", { key: "bao" }, "Bao"),
+      React.createElement("li", { key: "amber" }, "Amber"),
+      React.createElement("li", { key: "tash" }, "Tash"),
+      React.createElement("li", { key: "kasia" }, "Kasia"),
+      React.createElement("li", { key: "luna" }, "Luna"),
+      React.createElement("li", { key: "spike" }, "Spike"),
+    ]);
+    return list;
   }
 
   if (props.dailyLog) {
@@ -15,47 +77,40 @@ export default function History(props) {
   } else {
     return (
       <div className="History">
-        <div className="year">{year}</div>
-        <div className="month">{month} </div>
-        <div className="dateMonth">
-          {date}
-          {month}
+        <div>
+          Mon{" "}
           <span>
-            {" "}
-            <button onClick={handleClick}>Drop</button>{" "}
+            <button onClick={handleMon}>Show</button>
           </span>
+          <div>{buttonOne ? createList() : null}</div>
         </div>
-        <div className="dateMonth">
-          {date - 1}
-          {` ${month}`}
+        <div>
+          Tue{" "}
           <span>
-            {" "}
-            <button onClick={handleClick}>Drop</button>{" "}
+            <button onClick={handleTue}>Show</button>
           </span>
+          <div>{buttonTwo ? createList() : null}</div>
         </div>
-        <div className="dateMonth">
-          {date - 2}
-          {` ${month}`}
+        <div>
+          Wed{" "}
           <span>
-            {" "}
-            <button onClick={handleClick}>Drop</button>{" "}
+            <button onClick={handleWed}>Show</button>
           </span>
+          <div>{buttonThree ? createList() : null}</div>
         </div>
-        <div className="dateMonth">
-          {date - 3}
-          {` ${month}`}
+        <div>
+          Thu{" "}
           <span>
-            {" "}
-            <button onClick={handleClick}>Drop</button>{" "}
+            <button onClick={handleThu}>Show</button>
           </span>
+          <div>{buttonFour ? createList() : null}</div>
         </div>
-        <div className="dateMonth">
-          {date - 4}
-          {` ${month}`}
+        <div>
+          Fri{" "}
           <span>
-            {" "}
-            <button onClick={handleClick}>Drop</button>{" "}
+            <button onClick={handleFri}>Show</button>
           </span>
+          <div>{buttonFive ? createList() : null}</div>
         </div>
       </div>
     );
