@@ -62,20 +62,48 @@ export default function History(props) {
   function createList() {
     //Could add random numbers into times
     const list = React.createElement("ul", {}, [
-      React.createElement("li", { key: "mittens" }, "Mittens"),
-      React.createElement("p", {}, "In at 10:00. Out at 16:45"),
-      React.createElement("li", { key: "bao" }, "Bao"),
-      React.createElement("p", {}, "In at 10:11. Out at 16:41"),
-      React.createElement("li", { key: "amber" }, "Amber"),
-      React.createElement("p", {}, "In at 10:13. Out at 16:42"),
-      React.createElement("li", { key: "tash" }, "Tash"),
-      React.createElement("p", {}, "In at 10:11. Out at 16:42"),
-      React.createElement("li", { key: "kasia" }, "Kasia"),
-      React.createElement("p", {}, "In at 10:14. Out at 16:40"),
-      React.createElement("li", { key: "luna" }, "Luna"),
-      React.createElement("p", {}, "In at 10:11. Out at 16:41"),
-      React.createElement("li", { key: "spike" }, "Spike"),
-      React.createElement("p", {}, "In at 10:15. Out at 16:40"),
+      React.createElement("li", { key: "mittens" }, "Mittens:"),
+      React.createElement(
+        "p",
+        { className: "signedInOut" },
+        "In at 10:00. Out at 16:45"
+      ),
+      React.createElement("li", { key: "bao" }, "Bao:"),
+      React.createElement(
+        "p",
+        { className: "signedInOut" },
+        "In at 10:11. Out at 16:41"
+      ),
+      React.createElement("li", { key: "amber" }, "Amber:"),
+      React.createElement(
+        "p",
+        { className: "signedInOut" },
+        "In at 10:13. Out at 16:42"
+      ),
+      React.createElement("li", { key: "tash" }, "Tash:"),
+      React.createElement(
+        "p",
+        { className: "signedInOut" },
+        "In at 10:11. Out at 16:42"
+      ),
+      React.createElement("li", { key: "kasia" }, "Kasia:"),
+      React.createElement(
+        "p",
+        { className: "signedInOut" },
+        "In at 10:14. Out at 16:40"
+      ),
+      React.createElement("li", { key: "luna" }, "Luna:"),
+      React.createElement(
+        "p",
+        { className: "signedInOut" },
+        "In at 10:11. Out at 16:41"
+      ),
+      React.createElement("li", { key: "spike" }, "Spike:"),
+      React.createElement(
+        "p",
+        { className: "signedInOut" },
+        "In at 10:15. Out at 16:40"
+      ),
     ]);
     return list;
   }
