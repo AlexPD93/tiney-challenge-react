@@ -10,6 +10,12 @@
   align-self: center;
 }
 
+.catPic {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 180px;
+}
+
 .cat {
   align-content: center;
   justify-content: center;

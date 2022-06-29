@@ -1,15 +1,17 @@
 .History {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   row-gap: 20px;
+}
+
+.daysShow {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 ul {
   display: flex;
   flex-direction: column;
-  margin-right: auto;
   padding: 0;
   column-gap: 2px;
   margin-top: 0;
@@ -35,6 +37,7 @@ li {
   border-radius: 5px;
   font-size: 15px;
   cursor: pointer;
+  max-height: 3rem;
 }
 
 .showHide:hover {

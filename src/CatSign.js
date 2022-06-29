@@ -1,6 +1,13 @@
 import "./CatSign.css";
 import React, { useState } from "react";
 import SignedIn from "./SignedIn.js";
+import whiteCat from "./Pics/whiteCat.jpg";
+import spotty from "./Pics/spotty.jpg";
+import small from "./Pics/small.jpg";
+import clouded from "./Pics/cloudedleopard.jpg";
+import leopard from "./Pics/leopard.jpg";
+import tiger from "./Pics/tiger.jpg";
+import whiteTiger from "./Pics/whiteTiger.jpg";
 
 export default function CatSign(props) {
   const [signIn, setSignIn] = useState(false);
@@ -9,6 +16,15 @@ export default function CatSign(props) {
   const [container, setContainer] = useState(null);
 
   const cats = ["Mittens", "Bao", "Amber", "Tash", "Kasia", "Luna", "Spike"];
+  const photoArray = [
+    whiteCat,
+    spotty,
+    small,
+    clouded,
+    leopard,
+    tiger,
+    whiteTiger,
+  ];
 
   /*if (props.dailyLog === false) {
     const button = Array.from(document.getElementsByClassName("signInOut"));
@@ -44,14 +60,14 @@ export default function CatSign(props) {
         >
           You have {cats.length} cats expected today
         </div>
-        {cats.map((cat) => {
+        {cats.map((cat, index) => {
           return (
             <div
               className="childContainer"
               key={cat}
               style={{ display: isShown ? "flex" : "none" }}
             >
-              <img src="/" alt="/"></img>
+              <img className="catPic" src={photoArray[index]} alt="Cat"></img>
 
               <p className="cat"> {cat} </p>
               <p className="status">Signed Out</p>

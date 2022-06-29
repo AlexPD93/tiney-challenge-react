@@ -113,48 +113,38 @@ export default function History(props) {
     return (
       <div className="History">
         <div className="daysShow">
-          Mon{" "}
-          <span>
-            <button className="showHide" onClick={handleMon}>
-              Show
-            </button>
-          </span>
+          Mon
+          <button className="showHide" onClick={handleMon}>
+            Show
+          </button>
           <div>{buttonOne ? createList() : null}</div>
         </div>
         <div className="daysShow">
           Tue{" "}
-          <span>
-            <button className="showHide" onClick={handleTue}>
-              Show
-            </button>
-          </span>
+          <button className="showHide" onClick={handleTue}>
+            Show
+          </button>
           <div>{buttonTwo ? createList() : null}</div>
         </div>
         <div className="daysShow">
           Wed{" "}
-          <span>
-            <button className="showHide" onClick={handleWed}>
-              Show
-            </button>
-          </span>
+          <button className="showHide" onClick={handleWed}>
+            Show
+          </button>
           <div>{buttonThree ? createList() : null}</div>
         </div>
         <div className="daysShow">
           Thu{" "}
-          <span>
-            <button className="showHide" onClick={handleThu}>
-              Show
-            </button>
-          </span>
+          <button className="showHide" onClick={handleThu}>
+            Show
+          </button>
           <div>{buttonFour ? createList() : null}</div>
         </div>
         <div className="daysShow">
           Fri{" "}
-          <span>
-            <button className="showHide" onClick={handleFri}>
-              Show
-            </button>
-          </span>
+          <button className="showHide" onClick={handleFri}>
+            Show
+          </button>
           <div>{buttonFive ? createList() : null}</div>
         </div>
       </div>
