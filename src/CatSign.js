@@ -10,6 +10,16 @@ export default function CatSign(props) {
 
   const cats = ["Mittens", "Bao", "Amber", "Tash", "Kasia", "Luna", "Spike"];
 
+  /*if (props.dailyLog === false) {
+    const button = Array.from(document.getElementsByClassName("signInOut"));
+    button.map((button) => {
+      localStorage.setItem("sign", "Sign Out");
+      const stored = localStorage.getItem("sign");
+      console.log(stored);
+      button.innerText = stored;
+    });
+  }
+*/
   function handleClick(e) {
     if (e.target.innerText === "Sign In") {
       e.target.innerText = "Sign Out";
@@ -42,8 +52,10 @@ export default function CatSign(props) {
               style={{ display: isShown ? "flex" : "none" }}
             >
               <img src="/" alt="/"></img>
+
               <p className="cat"> {cat} </p>
-              <p>Signed Out</p>
+              <p className="status">Signed Out</p>
+
               <button className={"signInOut"} onClick={handleClick}>
                 Sign In
               </button>

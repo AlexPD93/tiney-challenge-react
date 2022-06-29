@@ -1,11 +1,37 @@
 .childContainer {
   display: flex;
+  margin-bottom: 1rem;
+  column-gap: 20px;
 }
 
 .catsExpected {
   text-align: center;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.cat {
+  align-content: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.status {
+  font-size: 12px;
+  max-width: 100px;
+  text-align: right;
+  align-self: center;
+  margin-left: auto;
 }
 
 .signInOut {
   background-color: #f0677a;
+  max-width: 12rem;
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.signInOut:hover {
+  font-weight: 600;
 }

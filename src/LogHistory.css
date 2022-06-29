@@ -7,4 +7,11 @@
   border: none;
   background-color: white;
   cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.logHistory:hover {
+  font-weight: 700;
+  text-decoration: underline;
 }

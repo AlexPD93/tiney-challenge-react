@@ -9,7 +9,6 @@ export default function History(props) {
   const [buttonFive, setButtonFive] = useState(false);
 
   function handleMon(e) {
-    console.log(e);
     if (e.target.innerText === "Show") {
       e.target.innerText = "Hide";
       setButtonOne(true);
@@ -65,43 +64,43 @@ export default function History(props) {
       React.createElement("li", { key: "mittens" }, "Mittens:"),
       React.createElement(
         "p",
-        { className: "signedInOut" },
+        { key: "classMittens", className: "signedInOut" },
         "In at 10:00. Out at 16:45"
       ),
       React.createElement("li", { key: "bao" }, "Bao:"),
       React.createElement(
         "p",
-        { className: "signedInOut" },
+        { key: "classBao", className: "signedInOut" },
         "In at 10:11. Out at 16:41"
       ),
       React.createElement("li", { key: "amber" }, "Amber:"),
       React.createElement(
         "p",
-        { className: "signedInOut" },
+        { key: "classAmber", className: "signedInOut" },
         "In at 10:13. Out at 16:42"
       ),
       React.createElement("li", { key: "tash" }, "Tash:"),
       React.createElement(
         "p",
-        { className: "signedInOut" },
+        { key: "classTash", className: "signedInOut" },
         "In at 10:11. Out at 16:42"
       ),
       React.createElement("li", { key: "kasia" }, "Kasia:"),
       React.createElement(
         "p",
-        { className: "signedInOut" },
+        { key: "classKasia", className: "signedInOut" },
         "In at 10:14. Out at 16:40"
       ),
       React.createElement("li", { key: "luna" }, "Luna:"),
       React.createElement(
         "p",
-        { className: "signedInOut" },
+        { key: "classLuna", className: "signedInOut" },
         "In at 10:11. Out at 16:41"
       ),
       React.createElement("li", { key: "spike" }, "Spike:"),
       React.createElement(
         "p",
-        { className: "signedInOut" },
+        { key: "classSpike", className: "signedInOut" },
         "In at 10:15. Out at 16:40"
       ),
     ]);
@@ -113,38 +112,48 @@ export default function History(props) {
   } else {
     return (
       <div className="History">
-        <div>
+        <div className="daysShow">
           Mon{" "}
           <span>
-            <button onClick={handleMon}>Show</button>
+            <button className="showHide" onClick={handleMon}>
+              Show
+            </button>
           </span>
           <div>{buttonOne ? createList() : null}</div>
         </div>
-        <div>
+        <div className="daysShow">
           Tue{" "}
           <span>
-            <button onClick={handleTue}>Show</button>
+            <button className="showHide" onClick={handleTue}>
+              Show
+            </button>
           </span>
           <div>{buttonTwo ? createList() : null}</div>
         </div>
-        <div>
+        <div className="daysShow">
           Wed{" "}
           <span>
-            <button onClick={handleWed}>Show</button>
+            <button className="showHide" onClick={handleWed}>
+              Show
+            </button>
           </span>
           <div>{buttonThree ? createList() : null}</div>
         </div>
-        <div>
+        <div className="daysShow">
           Thu{" "}
           <span>
-            <button onClick={handleThu}>Show</button>
+            <button className="showHide" onClick={handleThu}>
+              Show
+            </button>
           </span>
           <div>{buttonFour ? createList() : null}</div>
         </div>
-        <div>
+        <div className="daysShow">
           Fri{" "}
           <span>
-            <button onClick={handleFri}>Show</button>
+            <button className="showHide" onClick={handleFri}>
+              Show
+            </button>
           </span>
           <div>{buttonFive ? createList() : null}</div>
         </div>
