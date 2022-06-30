@@ -1,5 +1,8 @@
 # tiney Take Home Challenge
 
+## Hosted on Netlify
+[Project link](https://celadon-banoffee-846b49.netlify.app/)
+
 The challenge was to create a simple version of the tiney register app feature. I have chosen to complete this task in React. 
 
 ## Key user stories to consider: 
