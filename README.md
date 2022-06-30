@@ -13,4 +13,4 @@ The challenge was to create a simple version of the tiney register app feature. 
 ## With more time:
 1. I would have liked to have added the live time, date and day to the History component. So it would be possible to view when a specific cat has signed in in the past. 
 2. I would also have liked to have saved the time and date of the cat sign in to local storage.
-3. The button to switch between components would have styling to underline them when on the page. 
+3. The button to switch between components would have styling to underline it when on the page. 
