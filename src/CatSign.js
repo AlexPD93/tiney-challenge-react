@@ -10,9 +10,13 @@ import tiger from "./Pics/tiger.jpg";
 import whiteTiger from "./Pics/whiteTiger.jpg";
 
 export default function CatSign(props) {
+  //Signed in is whether cat is signed in or not
   const [signIn, setSignIn] = useState(false);
+  //Is shown is whether the Daily Log page is shown or the sign in page is shown
   const [isShown, setIsShown] = useState(true);
+  //Cat is the cat name
   const [cat, setCat] = useState(null);
+  //Container for signed in/out status with time
   const [container, setContainer] = useState(null);
 
   const cats = ["Mittens", "Bao", "Amber", "Tash", "Kasia", "Luna", "Spike"];

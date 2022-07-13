@@ -12,13 +12,18 @@ export default function SignedIn({
 
   const dateTime = new Date().toLocaleString().split(",").join("").slice(0, 16);
 
+  //Change setIsShown to true without reloading the page
   useEffect(() => {
     setIsShown(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [shown]);
+  }, [shown]); //Shown is the dependancy (When shown changes the useEffect runs)
+
+  //Line 18 is to debug a deploy issue(netlify)
 
   function handleClick() {
+    //This line sets 'setShown' to the opposite of what it is. Here it goes from true to false. Shown has now changed, useEffect is called.
     setShown((current) => !current);
+    //Doesn't display the sign in page with date and time but returns null
     setSignIn(false);
     container.innerText = `Signed in at ${dateTime}`;
   }
